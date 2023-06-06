@@ -1,0 +1,41 @@
+.footer {
+    background-color: #1C59A4;
+    background-image: linear-gradient(43deg,#1C59A4,#71018B 46%,#0B5194);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    /* Additional styling */
+  }
+  
+  .footer-content {
+    text-align: center;
+    
+  }
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding-left: 50%;
+  }
+  
+  .footer-icon {
+    font-size: 40px;
+    color: white;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .footer-icon:hover {
+    transform: scale(1.5);
+  }
+  
+  .linkedin-icon {
+    color: #0A66C2;
+  }
+  
+  .instagram-icon {
+    color: #E1306C; /* Replace with your desired color */
+    /* Adjust the size as needed */
+  }

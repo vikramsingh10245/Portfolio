@@ -1,0 +1,98 @@
+
+.head-text {
+  text-align: center;
+  
+}
+
+.app__profiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* Updated alignment */
+  height: 200%; /* Updated height */
+  
+}
+
+.app__profile-item {
+  height: 550px; /* Updated fixed height */
+  width: 350px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-image: linear-gradient(43deg, #1C59A4, #71018B 46%, #0B5194);
+ 
+}
+
+.app__profile-item img {
+  width: 350px; /* Adjusted width */
+  height: 250px; /* Adjusted height */
+  
+}
+
+
+.app__profile-item:hover {
+  transform: scale(1.05);
+}
+
+.bold-text {
+  margin-top: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.app__profile-item:hover .bold-text {
+  color: #f59797;
+}
+
+.p-text {
+  margin-top: 30px;
+  transition: opacity 0.3s ease;
+}
+
+.app__profile-item:hover .p-text {
+  opacity: 0.8;
+}
+.highlight {
+  position: relative;
+  
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(1);
+  transition: transform 0.9s ease;
+  
+}
+
+.highlight:hover::after {
+  transform: scaleX(2);
+}
+
+.highlight:hover {
+ 
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #243cf2;
+}
+.project__image {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: transform 0.3s;
+}
+
+.project__image:hover {
+  transform: scale(1.1);
+}
+

@@ -1,0 +1,33 @@
+/* Sideicons.css */
+
+.sidebar__icon-container {
+  position: fixed;
+  padding-left: 5px;
+  top: 40%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999; /* Ensure the icons appear above other content */
+  transition: top 0.5s; /* Add transition for smooth movement */
+  opacity: 0.7;
+}
+
+.sidebar__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  color: #000;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition: font-size 0.2s;
+  
+}
+
+.sidebar__icon:hover {
+  font-size: 28px;
+}
