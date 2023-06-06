@@ -7,7 +7,7 @@ const Project = () => {
   const abouts = [
     { title: 'My Portfolio', description: "I proudly present my React.js portfolio, showcasing my skills and experience.With dynamic components and seamless navigation,I've crafted an engaging website. Leveraging HTML,CSS, and React libraries and much more..", imgUrl: images.portfolio, link: 'https://github.com/vikramsingh10245/Portfolio' },
     { title: 'Student Course', description: "I have developed a project using React.js, Spring Boot, MySQL, and other React.js libraries to manage student courses. The project allows users to add new courses, view all existing courses, delete courses, and update course information. It provides a seamless and interactive experience for managing student course data.", imgUrl: images.courselogo, link: 'https://github.com/vikramsingh10245/Student-Course-Fullstack'},
-    { title: 'Employee CRUD Operations', description: " This was my first full stack project in which i have successfully implemented CRUD operations (Create, Read, Update, Delete) for managing employee data. By utilizing React.js for the front-end, Spring Boot for the back-end, and MySQL for the database, i have created a robust application.", imgUrl: images.employeinfo, link: 'https://github.com/vikramsingh10245/Employee-Info-CRUD' }
+    { title: 'Employee CRUD Operations', description: " This is my first full stack project in which i have successfully implemented CRUD operations (Create, Read, Update, Delete) for managing employee data. By utilizing React.js for the front-end, Spring Boot for the back-end, and MySQL for the database, i have created a robust application.", imgUrl: images.employeinfo, link: 'https://github.com/vikramsingh10245/Employee-Info-CRUD' }
     
   ];
 
