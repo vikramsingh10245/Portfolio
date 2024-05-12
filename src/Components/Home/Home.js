@@ -1,8 +1,8 @@
 import React from 'react';
 import './Home.css';
 import { motion } from 'framer-motion';
-import { images } from '../../Constants';
-import resume from './resume.pdf';
+
+import My_Resume from './My_Resume.pdf';
 
 const Home = () => {
   const name = "Vikram Singh";
@@ -49,11 +49,10 @@ const Home = () => {
           className="my__home-img"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          src={images.profile}
-          alt="profile1_bg"
+          
         />
         <div className='home__resume'>
-          <a href={resume} download>
+          <a href={My_Resume} download>
             <button className='home__cv'>Download CV</button>
           </a>
         </div>
@@ -61,9 +60,9 @@ const Home = () => {
       <div className="right-section">
         <h1 className="home__name" id="typing-effect"> </h1>
         <p className="about-me-text">
-          I am a passionate full-stack developer with 1.6 years experience in both frontend and backend technologies.
+          I am a passionate full-stack developer with 2.9+ years experience in both frontend and backend technologies.
           I thoroughly enjoy building web applications and constantly exploring new technologies to stay innovative in my work.
-          With a strong focus on frontend development, I take pleasure in bringing designs to life and delivering intuitive
+          With a strong focus on  development, I take pleasure in bringing designs to life and delivering intuitive
           user experiences. Additionally, I am equally skilled in backend development,
           I am committed to continuous learning, always seeking opportunities to expand my knowledge and skills. With a strong work ethic and dedication to
           personal and professional growth, I am driven to excel in my role as a developer.

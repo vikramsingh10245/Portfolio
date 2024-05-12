@@ -1,5 +1,4 @@
 import email from '../assets/email.png';
-import profile from '../assets/profile.png';
 import companylogo from '../assets/companylogo.PNG';
 import portfolio from '../assets/portfolio.png';
 import courselogo from '../assets/courselogo.png';
@@ -10,7 +9,6 @@ const images = {
   portfolio,
   employeinfo,
   courselogo,
-  profile,
   companylogo,
 };
 
