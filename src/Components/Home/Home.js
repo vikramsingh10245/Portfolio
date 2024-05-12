@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import { motion } from 'framer-motion';
 
-import My_Resume from './My_Resume.pdf';
+import Vikram_Singh from './Vikram_Singh.pdf';
 
 const Home = () => {
   const name = "Vikram Singh";
@@ -52,7 +52,7 @@ const Home = () => {
           
         />
         <div className='home__resume'>
-          <a href={My_Resume} download>
+          <a href={Vikram_Singh} download>
             <button className='home__cv'>Download CV</button>
           </a>
         </div>
