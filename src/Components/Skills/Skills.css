@@ -3,15 +3,14 @@
   font-size: 30px;
   font-weight: bold;
   transition: color 0.3s, font-size 0.3s;
-  padding-top: 4%;
+  padding-top: 8%;
   padding-bottom: 1%;
   color: linear-gradient(43deg, #4158d0, #c850c0, #ffcc70);
 }
 
 #skills__text:hover {
-  
   font-size: 24px;
-  animation: shake 0.5s ease-in-out;
+ 
 }
 
 @keyframes shake {
@@ -37,17 +36,19 @@
 
 .skills-container {
   display: flex;
+  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 20px; /* Increased gap between skill items */
+  padding: 20px;
 }
 
 .skill-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 100px;
+  width: 80px; /* Adjust width */
+  height: 80px; /* Adjust height */
   border-radius: 50%;
   background-color: #e5e5e8;
   transform-style: preserve-3d;
@@ -60,7 +61,7 @@
 }
 
 .icon {
-  font-size: 70px;
+  font-size: 50px; /* Adjust icon size */
   color: #fff;
   transition: color 0.3s;
 }
@@ -71,8 +72,8 @@
 
 .html {
   color: #e34c26;
-  
 }
+
 .springboot {
   color: #6db33f;
 }
@@ -85,36 +86,42 @@
   color: #2965f1;
 }
 
-.python {
-  color: #4b8bbe;
+.git {
+  color: #000;
 }
 
 .mysql {
   color: #00758f;
 }
- .java {
-  
+
+.java {
   color: #5382a1;
 }
 
 .oracle {
-  
   color: #f80000;
 }
 
-
 .line {
-
   width: 2px;
   height: 50px;
   background: linear-gradient(to bottom, #ff0000, #00ff00);
   margin: 20px auto;
 }
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+  justify-content: center;
+  gap: 20px; /* Increased gap between cards */
+  padding: 20px; /* Add padding around the cards container */
+
+}
+
 .custom-card {
-  height: auto;
-  width: 400px;
+  height: 300px;
+  width: 600px; /* Adjusted width for better fit */
   padding: 10px;
-  margin: 0 auto;
   position: relative;
   background-color: #f8f9fa;
   border: 1px solid #dee2e6;
@@ -125,7 +132,8 @@
 .card-body {
   padding: 0; /* Remove the default padding */
   margin: 0; /* Remove the default margin */
-  background-image: linear-gradient(43deg,#1C59A4,#71018B 46%,#0B5194);
+  /* background-image: linear-gradient(43deg, #1C59A4, #71018B 46%, #0B5194); */
+  background-image: linear-gradient(43deg, #336eb6, #71018B 46%, #0B5194);
 }
 
 .card-text {
@@ -134,14 +142,10 @@
   color: #fff; /* Updated text color to white */
 }
 
-
 .card-title {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
-  background-image: linear-gradient(43deg,#4158d0,#c850c0 46%,#ffcc70);
+  background-image: linear-gradient(43deg, #4158d0, #c850c0 46%, #ffcc70);
   color: #fff;
 }
-
-
-

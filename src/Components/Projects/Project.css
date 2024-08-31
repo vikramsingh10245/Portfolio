@@ -1,22 +1,30 @@
-
+/* Ensures text is centered */
 .head-text {
   text-align: center;
-  
+  padding-top: 3%;
 }
 
+/* Styles for the project container */
+.project__container {
+  padding: 10px; /* Add padding for better spacing */
+}
+
+/* Flexbox layout for project profiles */
 .app__profiles {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center; /* Updated alignment */
-  height: 200%; /* Updated height */
-  
+  align-items: flex-start; /* Align items to the start to avoid overlap */
+  gap: 20px; /* Space between items */
+  padding: 10px;
 }
 
+/* Individual project item styling */
 .app__profile-item {
-  height: 550px; /* Updated fixed height */
-  width: 350px;
-  margin: 30px;
+  height: 430px; /* Remove fixed height for better responsiveness */
+  width: 100%; /* Full width within the container */
+  max-width: 400px; /* Maximum width of each item */
+  margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,16 +34,15 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   background-image: linear-gradient(43deg, #1C59A4, #71018B 46%, #0B5194);
- 
 }
 
+/* Ensure images fit within the item */
 .app__profile-item img {
-  width: 350px; /* Adjusted width */
-  height: 250px; /* Adjusted height */
-  
+  width: 100%; /* Full width of the profile item */
+  height: auto; /* Maintain aspect ratio */
 }
 
-
+/* Hover effect */
 .app__profile-item:hover {
   transform: scale(1.05);
 }
@@ -51,16 +58,19 @@
 }
 
 .p-text {
-  margin-top: 30px;
+  margin-top: 10px; /* Adjusted margin for better spacing */
   transition: opacity 0.3s ease;
 }
 
 .app__profile-item:hover .p-text {
   opacity: 0.8;
 }
+
+/* Highlight effect for headings */
 .highlight {
   position: relative;
-  
+  display: inline-block;
+  font-weight: bold;
 }
 
 .highlight::after {
@@ -70,21 +80,16 @@
   bottom: -2px;
   width: 100%;
   height: 2px;
-  transform: scaleX(1);
+  background-color: #243cf2; /* Highlight color */
+  transform: scaleX(0);
   transition: transform 0.9s ease;
-  
 }
 
 .highlight:hover::after {
-  transform: scaleX(2);
+  transform: scaleX(1);
 }
 
-.highlight:hover {
- 
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  color: #243cf2;
-}
+/* Image styling for projects */
 .project__image {
   cursor: pointer;
   border: none;
@@ -96,3 +101,15 @@
   transform: scale(1.1);
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app__profiles {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .app__profile-item {
+    width: 90%; /* Full width on small screens */
+    max-width: none; /* Remove max-width on small screens */
+  }
+}

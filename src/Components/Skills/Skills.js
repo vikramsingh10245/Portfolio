@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaReact, FaHtml5, FaJava } from 'react-icons/fa';
-import { SiSpringboot, SiPostman, SiCss3, SiPython, SiMysql, SiOracle } from 'react-icons/si';
+import { FaReact, FaHtml5, FaJava, FaGit } from 'react-icons/fa';
+import { SiSpringboot, SiPostman, SiCss3, SiMysql, SiOracle } from 'react-icons/si';
 import { Card, CardBody, CardTitle, CardText } from 'reactstrap';
 import { images } from '../../Constants';
 import './Skills.css';
@@ -29,7 +29,7 @@ const Skills = () => {
           <SiCss3 className="icon css3" />
         </div>
         <div className="skill-item">
-          <SiPython className="icon python" />
+          <FaGit className="icon git" />
         </div>
         <div className="skill-item">
           <SiMysql className="icon mysql" />
@@ -39,24 +39,50 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="line"></div>
-      <Card className="custom-card">
-        <CardBody>
-          <CardTitle style={{color:'white'}}> <img src={images.companylogo} style={{height:40 ,width:40 ,marginRight:30}} alt='' />
-          Virtusa Engineering First
-          </CardTitle>
-          <CardText>
-            <ul>
-              <li>I have extensive experience in Java Spring Boot, building scalable web applications using its 
-                robust framework. Proficient in RESTful API development, I leverage Spring Boot's features and best 
-                practices to deliver efficient solutions.</li>
-              <li>I possess in-depth knowledge of Oracle DB, specializing in data migration, query optimization, 
-                and performance tuning. Skilled in writing complex SQL queries, I ensure accurate data retrieval, 
-                manipulation, and analysis within Oracle DB environments..</li>
-            </ul>
-          </CardText>
-        </CardBody>
-      </Card>
+      {/* <div className="line"></div> */}
+      <div className="cards-container">
+        <Card className="custom-card">
+          <CardBody>
+            <CardTitle style={{ color: 'white' }}>
+              <img src={images.companylogo} style={{ height: 40, width: 40, marginRight: 30 }} alt='' />
+              Virtusa Engineering First<br />
+              <img src={images.btlogo} style={{ height: 40, width: 40, marginRight: 30 }} alt='' />
+              British telecommunications - Client
+            </CardTitle>
+            <CardText>
+              <ul>
+                <li>Defect Tracking and Resolution: Addressed migration issues using Oracle DB and React.js for seamless front-end integration.
+                </li>
+                <li>RESTful Web Services: Developed APIs to enhance React.js front-end functionality and improve user experience.</li>
+                <li>Oracle Database Management: Managed SQL queries, resolved errors, and ensured data accuracy.</li>
+                <li>Data Quality and Triggers: Established data quality rules and implemented triggers to maintain data integrity and boost user engagement.
+                </li>
+              </ul>
+            </CardText>
+          </CardBody>
+        </Card>
+        <Card className="custom-card">
+          <CardBody>
+            <CardTitle style={{ color: 'white' }}>
+              <img src={images.companylogo} style={{ height: 40, width: 40, marginRight: 30 }} alt='' />
+              Virtusa Engineering First
+            </CardTitle>
+            <CardText>
+              <ul>
+                <li>Healthcare System: Developed a comprehensive application to enhance healthcare management using modern technologies.
+                </li>
+                <li>Backend: Utilized Spring Boot to develop robust and scalable RESTful APIs, 
+                  enabling efficient CRUD operations and advanced security features. 
+                  This framework facilitated seamless integration with the frontend. 
+                  </li>
+                <li>Frontend: Designed with ReactJS to deliver a highly dynamic and responsive user interface, featuring intuitive navigation and real-time updates for an enhanced user experience.</li>
+                <li>Database: Employed Oracle DB for secure, scalable data storage, ensuring consistent handling of healthcare data.</li>
+
+              </ul>
+            </CardText>
+          </CardBody>
+        </Card>
+      </div>
     </div>
   );
 };

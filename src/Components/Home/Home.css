@@ -1,83 +1,42 @@
+/* General container for home section */
 .home-container {
   display: flex;
+  flex-wrap: wrap; /* Ensure it wraps on smaller screens */
   align-items: flex-start;
   justify-content: space-between;
-  height: 100vh;
-  padding: 40px;
+  height: auto; /* Adjust height to fit content */
+  padding: 20px; /* Adjust padding */
+  box-sizing: border-box; /* Include padding in element's total width and height */
 }
 
+/* Styling for the left section */
 .left-section {
   flex: 1;
-  padding-top: 10%;
+  padding-top: 8%;
   padding-left: 5%;
+  /* Ensure left section takes up appropriate width */
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
+/* Styling for the right section */
 .right-section {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 10%;
-
-}
-
-.my__home-img {
-  width: 100%;
-  max-width: 300px;
-  height: 70%;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(135deg, #71018B, #0B5194);
-  color: #fff;
-  animation: frameEffect 2s linear infinite;
-  transition: box-shadow 0.3s ease;
-  margin-bottom: 50px;
-  
-}
-.my__home-img:hover {
-  box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.8);
-}
-
-.home__name {
-  font-size: 50px;
-  margin-bottom: 10px;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-}
-
-.home__name {
-  font-size: 50px;
-  margin-bottom: 10px;
-  color: #fff;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid #fff;
-}
-
-
-.about-me-text {
-  font-size: 20px;
-  line-height: 1.5;
+  padding-top: 8%;
+  font-size: 22px;
   margin-bottom: 20px;
-  color: #fff;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out 3s forwards;
+  line-height: 1.5;
+  /* Ensure right section takes up appropriate width */
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-#typing-effect{
-  color: linear-gradient(43deg,#1C59A4,#71018B 46%,#0B5194);
-}
+
+/* Ensure button are responsive */
 .home__cv {
   position: relative;
   overflow: hidden;
@@ -91,32 +50,45 @@
   z-index: 1;
 }
 
-.home__cv::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s;
-  z-index: -1;
+
+/* Styling for the name header */
+.home__name {
+  font-size: 2.5rem; /* Responsive font size */
+  margin-bottom: 10px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap; /* Prevent text from wrapping */
+  border-right: 3px solid #fff; /* Typing effect */
+  animation: typing 2s steps(30, end), blink-caret 0.75s step-end infinite;
 }
 
-.home__cv:hover::before {
-  transform: translateX(100%);
+
+/* Animation for typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
 }
 
-.home__cv:active::before {
-  transform: translateX(0%);
+/* Animation for blinking caret */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #fff; }
 }
 
-.home__cv:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+  }
 
-.home__cv:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  .left-section, .right-section {
+    flex: none;
+    width: 100%; /* Full width on smaller screens */
+    padding: 0; /* Remove padding for better spacing */
+  }
+
+  .home__name {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
 }

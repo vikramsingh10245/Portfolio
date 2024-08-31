@@ -1,71 +1,64 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
-import { motion } from 'framer-motion';
-
-import Vikram_Singh from './Vikram_Singh.pdf';
+import Vikram_Singh_Resume from '../../Constants/Vikram_Singh_Resume.pdf'
 
 const Home = () => {
   const name = "Vikram Singh";
-  const typingDelay = 200; // Delay between each letter typing
-  const deletingDelay = 300; // Delay after deleting each letter
-  const pauseDelay = 5000; // Delay after completing a cycle
+  const typingDelay = 50; // Delay between each letter typing
+  const deletingDelay = 80; // Delay after deleting each letter
+  const pauseDelay =400; // Delay after completing a cycle
 
-  let isDeleting = false;
-  let currentText = "";
-  let timer;
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
 
-  function type() {
-    if (isDeleting) {
-      currentText = name.substring(0, currentText.length - 1);
-    } else {
-      currentText = name.substring(0, currentText.length + 1);
-    }
+  useEffect(() => {
+    let timer;
 
-    const typingElement = document.getElementById("typing-effect");
-    typingElement.innerHTML = `Hi! I am <br />${currentText}`;
+    const type = () => {
+      if (isDeleting) {
+        setCurrentText(name.substring(0, currentText.length - 1));
+      } else {
+        setCurrentText(name.substring(0, currentText.length + 1));
+      }
 
-    if (!isDeleting && currentText === name) {
-      isDeleting = true;
-      clearInterval(timer);
-      timer = setTimeout(type, pauseDelay);
-    } else if (isDeleting && currentText === "") {
-      isDeleting = false;
-      clearInterval(timer);
-      timer = setTimeout(type, typingDelay);
-    }
+      if (!isDeleting && currentText === name) {
+        setIsDeleting(true);
+        timer = setTimeout(type, pauseDelay);
+      } else if (isDeleting && currentText === "") {
+        setIsDeleting(false);
+        timer = setTimeout(type, typingDelay);
+      } else {
+        timer = setTimeout(type, isDeleting ? deletingDelay : typingDelay);
+      }
+    };
 
-    timer = setTimeout(type, isDeleting ? deletingDelay : typingDelay);
-  }
+    timer = setTimeout(type, pauseDelay);
 
-  timer = setTimeout(type, pauseDelay);
-
-
+    return () => clearTimeout(timer); // Cleanup on unmount
+  }, [currentText, isDeleting]);
 
   return (
     <div className="home-container" id="Home">
       <div className="left-section">
-
-        <motion.img
-          className="my__home-img"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          
-        />
         <div className='home__resume'>
-          <a href={Vikram_Singh} download>
+          <a href={Vikram_Singh_Resume} download="Vikram_Singh_Resume.pdf">
             <button className='home__cv'>Download CV</button>
           </a>
         </div>
       </div>
       <div className="right-section">
-        <h1 className="home__name" id="typing-effect"> </h1>
+        <h1 className="home__name">
+          Hi! I am <br />{currentText}
+        </h1>
         <p className="about-me-text">
-          I am a passionate full-stack developer with 2.9+ years experience in both frontend and backend technologies.
-          I thoroughly enjoy building web applications and constantly exploring new technologies to stay innovative in my work.
-          With a strong focus on  development, I take pleasure in bringing designs to life and delivering intuitive
-          user experiences. Additionally, I am equally skilled in backend development,
-          I am committed to continuous learning, always seeking opportunities to expand my knowledge and skills. With a strong work ethic and dedication to
-          personal and professional growth, I am driven to excel in my role as a developer.
+          Innovative Full Stack Java Developer with over 3 years of experience in architecting, developing,
+          and deploying high-performance web applications. Expertise in Java, ReactJS, Spring Boot, SQL, and Oracle DB,
+          with a proven track record of implementing scalable solutions and optimizing database performance. Skilled in
+          utilizing modern development tools such as Git for version control and collaboration, ensuring streamlined workflows
+          and high-quality code. Adept at integrating RESTful APIs, enhancing user experiences through dynamic front-end interfaces,
+          and building robust server-side architectures. Strong understanding of Agile methodologies, enabling efficient and
+          iterative development processes. Committed to continuous improvement and staying abreast of industry advancements to
+          deliver cutting-edge solutions that drive business success and innovation.
         </p>
       </div>
     </div>

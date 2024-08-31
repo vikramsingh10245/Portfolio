@@ -15,18 +15,15 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.warn('its working');
-
     emailjs.sendForm('service_2nghdbc', 'template_c9qczld', e.target, '3aYeG0AObTPOoFmqV')
       .then((result) => {
-        console.warn(result.text);
         toast('Email Sent Successfully');
         setName('');
         setEmail('');
         setMessage('');
       })
       .catch((error) => {
-        console.warn(error.text);
+        toast.error('An Error Occur',error.text);
       });
   };
 
