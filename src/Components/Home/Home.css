@@ -15,7 +15,7 @@
   padding-top: 8%;
   padding-left: 5%;
   /* Ensure left section takes up appropriate width */
-  max-width: 100%;
+  max-width: 60%;
   box-sizing: border-box;
 }
 
@@ -48,6 +48,9 @@
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
   z-index: 1;
+  margin-left: 150px;
+  margin-top: 200px;
+
 }
 
 
