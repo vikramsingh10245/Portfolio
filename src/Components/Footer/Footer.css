@@ -5,11 +5,13 @@
     background-position: center;
     color: white;
     padding: 20px;
+    height: fit-content;
     /* Additional styling */
   }
   
   .footer-content {
     text-align: center;
+    margin-top: 80px;
     
   }
   .icon-container {

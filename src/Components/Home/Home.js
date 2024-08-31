@@ -6,9 +6,9 @@ const Home = () => {
   const name = "Vikram Singh";
   const typingDelay = 50; // Delay between each letter typing
   const deletingDelay = 80; // Delay after deleting each letter
-  const pauseDelay =400; // Delay after completing a cycle
+  const pauseDelay = 400; // Delay after completing a cycle
 
-  const [currentText, setCurrentText] = useState("");
+  const [currentText, setCurrentText] = useState("V"); // Start with 'V'
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const Home = () => {
 
     const type = () => {
       if (isDeleting) {
-        setCurrentText(name.substring(0, currentText.length - 1));
+        setCurrentText(name.substring(0, Math.max(1, currentText.length - 1)));
       } else {
         setCurrentText(name.substring(0, currentText.length + 1));
       }
@@ -24,7 +24,7 @@ const Home = () => {
       if (!isDeleting && currentText === name) {
         setIsDeleting(true);
         timer = setTimeout(type, pauseDelay);
-      } else if (isDeleting && currentText === "") {
+      } else if (isDeleting && currentText === "V") { // Stop at 'V'
         setIsDeleting(false);
         timer = setTimeout(type, typingDelay);
       } else {
