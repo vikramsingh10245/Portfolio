@@ -36,7 +36,6 @@ const Home = () => {
 
     return () => clearTimeout(timer); // Cleanup on unmount
   }, [currentText, isDeleting]);
-
   return (
     <div className="home-container" id="Home">
       <div className="left-section">
