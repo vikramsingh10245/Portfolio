@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css';
-import Vikram_Singh_Resume from '../../Constants/Vikram_Singh_Resume.pdf'
+import Vikram_Singh_Resume from '../../Constants/Vikram_Singh_Resume.pdf';
+import { images } from '../../Constants';
+import { FaGithub, FaLinkedin,FaArrowDown   } from 'react-icons/fa'; // Import icons
 
 const Home = () => {
   const name = "Vikram Singh";
@@ -36,9 +38,22 @@ const Home = () => {
 
     return () => clearTimeout(timer); // Cleanup on unmount
   }, [currentText, isDeleting]);
+
   return (
     <div className="home-container" id="Home">
       <div className="left-section">
+        <img id="my-pic" src={images.mypic} alt="Vikram Singh" />
+        <div className="connect-section">
+          <h2>Connect with me to know more  <FaArrowDown className="down-arrow-icon" /></h2>
+          <div className="icons">
+            <a href="https://github.com/vikramsingh10245" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="footer-icon github-icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/vikram-07singh/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="footer-icon linkedin-icon" />
+            </a>
+          </div>
+        </div>
         <div className='home__resume'>
           <a href={Vikram_Singh_Resume} download="Vikram_Singh_Resume.pdf">
             <button className='home__cv'>Download CV</button>
@@ -50,12 +65,12 @@ const Home = () => {
           Hi! I am <br />{currentText}
         </h1>
         <p className="about-me-text">
-        Experienced Full Stack Developer with over 3 years of expertise in Telecom, Healthcare, Ecommerce, and Banking sectors. 
-        Proficient in Java, Spring Boot, and ReactJS, with strong skills in data structures, algorithms, and problem-solving. 
-        Adept at building dynamic, responsive front-end applications and robust, scalable back-end systems. 
-        Skilled in secure coding practices, database management using Oracle SQL, and leveraging AWS for cloud-based deployments. 
-        Proficient in DevOps with hands-on experience in CI/CD pipelines using Jenkins. 
-        Continuously learning and applying best practices in Docker, Kubernetes, and container orchestration.
+          Experienced Full Stack Developer with over 3 years of expertise in Telecom, Healthcare, Ecommerce, and Banking sectors.
+          Proficient in Java, Spring Boot, and ReactJS, with strong skills in data structures, algorithms, and problem-solving.
+          Adept at building dynamic, responsive front-end applications and robust, scalable back-end systems.
+          Skilled in secure coding practices, database management using Oracle SQL, and leveraging AWS for cloud-based deployments.
+          Proficient in DevOps with hands-on experience in CI/CD pipelines using Jenkins.
+          Continuously learning and applying best practices in Docker, Kubernetes, and container orchestration.
         </p>
       </div>
     </div>

@@ -34,9 +34,23 @@
   max-width: 100%;
   box-sizing: border-box;
 }
+#my-pic {
+  display: block;
+  margin: 0 auto; /* Center the image */
+  margin-bottom: 20px; /* Space between image and button */
+  width: 10em; /* Control size of the image */
+  height: 10em; /* Maintain aspect ratio with width */
+  border-radius: 10%; /* Makes the image circular */
+  overflow: hidden; /* Hide overflow to ensure circle shape */
+}
 
+#my-pic {
+  width: 30%; /* Make the image fill the container */
+  height: 30%; /* Ensure the image maintains the aspect ratio */
+  object-fit: cover; /* Ensure image fits nicely within the container */
+}
 
-/* Ensure button are responsive */
+/* Styling for the CV button */
 .home__cv {
   position: relative;
   overflow: hidden;
@@ -48,11 +62,9 @@
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
   z-index: 1;
-  margin-left: 150px;
-  margin-top: 200px;
-
+  margin-top: 20px; /* Ensure space between image and button */
+  font-size: 16px;
 }
-
 
 /* Styling for the name header */
 .home__name {
@@ -94,4 +106,24 @@
   .home__name {
     font-size: 2rem; /* Adjust font size for smaller screens */
   }
+}
+.connect-section {
+  text-align: center; /* Center the text */
+  margin: 20px 0; /* Add margin above and below the section */
+}
+
+.icons {
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: center; /* Center the icons */
+  gap: 15px; /* Space between icons */
+}
+
+.icons a {
+  color: #000; /* Change this to your preferred icon color */
+  font-size: 1.5rem; /* Adjust size of the icons */
+  transition: color 0.3s; /* Transition effect for hover */
+}
+
+.icons a:hover {
+  color: #4158d0; /* Change this to your preferred hover color */
 }

@@ -19,7 +19,10 @@ const Project = () => {
         <br />
         means{' '}
         <span className="highlight">Good Business</span>
+        <br /><br />
+        <span>Personal Projects</span>
       </h2>
+
       <div className="app__profiles">
         {abouts.map((about, index) => (
           <div key={about.title + index} className="app__profile-item">

@@ -53,13 +53,14 @@ const Skills = () => {
       </div>
 
       <div className="cards-container">
+        {/* First Card */}
         <Card className="custom-card">
           <CardBody>
             <CardTitle style={{ color: 'white' }}>
               <img src={images.companylogo} style={{ height: 40, width: 40, marginRight: 30 }} alt='' />
               Virtusa Engineering First<br />
               <img src={images.btlogo} style={{ height: 40, width: 40, marginRight: 30 }} alt='' />
-              British telecommunications - Client
+              British Telecommunications - Client
             </CardTitle>
             <CardText>
               <ul>
@@ -71,6 +72,8 @@ const Skills = () => {
             </CardText>
           </CardBody>
         </Card>
+
+        {/* Second Card */}
         <Card className="custom-card">
           <CardBody>
             <CardTitle style={{ color: 'white' }}>
@@ -83,6 +86,50 @@ const Skills = () => {
                 <li>Backend: Utilized Spring Boot to develop robust and scalable RESTful APIs, enabling efficient CRUD operations and advanced security features. This framework facilitated seamless integration with the frontend.</li>
                 <li>Frontend: Designed with ReactJS to deliver a highly dynamic and responsive user interface, featuring intuitive navigation and real-time updates for an enhanced user experience.</li>
                 <li>Database: Employed Oracle DB for secure, scalable data storage, ensuring consistent handling of healthcare data.</li>
+              </ul>
+            </CardText>
+          </CardBody>
+        </Card>
+
+        {/* Third Card */}
+        <Card className="custom-card">
+          <CardBody>
+            <CardTitle style={{ color: 'white' }}>
+              <img src={images.companylogo} style={{ height: 40, width: 40, marginRight: 30 }} alt='' />
+              Virtusa Engineering First
+            </CardTitle>
+            <CardText>
+              <ul>
+                <li> Enhanced front-end functionalities by implementing Restful web services, ensuring seamless user
+                  interaction and elevating overall user experience.</li>
+                <li>Developed login page and user creation module with role-based access control using Java and Spring Boot,
+                  integrated with JWT token authentication for enhanced security measures within the application.</li>
+                <li>Implemented JWT token security feature within the application to enhance authentication and
+                  authorization mechanisms, ensuring robust security measures, and deployed the updated system for
+                  immediate utilization.</li>
+              </ul>
+            </CardText>
+          </CardBody>
+        </Card>
+
+        {/* Fourth Card */}
+        <Card className="custom-card">
+          <CardBody>
+            <CardTitle style={{ color: 'white' }}>
+              <img src={images.companylogo} style={{ height: 40, width: 40, marginRight: 30 }} alt='' />
+              Virtusa Engineering First<br />
+              <img src={images.jpmorgan} style={{ height: 40, width: 40, marginRight: 30 }} alt='' />
+              JpMorganChase &Co - Client
+            </CardTitle>
+            <CardText>
+              <ul>
+                <li>Led the upgrade of Mandate-UI Payment Service from Java 8 to Java 17, enhancing functionality and
+                  performance.</li>
+                  <li>Developed backend components with Spring Boot, managed code refactoring, and ensured
+                  compatibility.</li>
+                 <li> Deployed the application on AWS EKS, handling container orchestration and scalable management.</li>
+                <li>  Collaborated with Zenith on tool integration and optimized the CI/CD pipeline for smooth deployment.</li>
+                  <li>Oversaw the entire deployment lifecycle and monitored performance to ensure operational excellence. </li>
               </ul>
             </CardText>
           </CardBody>

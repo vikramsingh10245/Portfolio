@@ -10,6 +10,7 @@
 
 #skills__text:hover {
   font-size: 24px;
+ 
 }
 
 @keyframes shake {
@@ -100,23 +101,10 @@
 .oracle {
   color: #f80000;
 }
-
-.aws {
-  color: #FF9900; /* AWS color */
-}
-
-.docker {
-  color: #2496ED; /* Docker color */
-}
-
-.kubernetes {
-  color: #326CE5; /* Kubernetes color */
-}
-
-.jenkins {
-  color: #D4492B; /* Jenkins color */
-}
-
+.aws { color: #FF9900; }
+.docker { color: #2496ED; }
+.kubernetes { color: #326CE5; }
+.jenkins { color: #D24939; }
 .line {
   width: 2px;
   height: 50px;
@@ -130,6 +118,7 @@
   justify-content: center;
   gap: 20px; /* Increased gap between cards */
   padding: 20px; /* Add padding around the cards container */
+
 }
 
 .custom-card {
@@ -146,6 +135,7 @@
 .card-body {
   padding: 0; /* Remove the default padding */
   margin: 0; /* Remove the default margin */
+  /* background-image: linear-gradient(43deg, #1C59A4, #71018B 46%, #0B5194); */
   background-image: linear-gradient(43deg, #336eb6, #71018B 46%, #0B5194);
 }
 
