@@ -50,14 +50,12 @@ const Home = () => {
           Hi! I am <br />{currentText}
         </h1>
         <p className="about-me-text">
-          Innovative Full Stack Java Developer with over 3 years of experience in architecting, developing,
-          and deploying high-performance web applications. Expertise in Java, ReactJS, Spring Boot, SQL, and Oracle DB,
-          with a proven track record of implementing scalable solutions and optimizing database performance. Skilled in
-          utilizing modern development tools such as Git for version control and collaboration, ensuring streamlined workflows
-          and high-quality code. Adept at integrating RESTful APIs, enhancing user experiences through dynamic front-end interfaces,
-          and building robust server-side architectures. Strong understanding of Agile methodologies, enabling efficient and
-          iterative development processes. Committed to continuous improvement and staying abreast of industry advancements to
-          deliver cutting-edge solutions that drive business success and innovation.
+        Experienced Full Stack Developer with over 3 years of expertise in Telecom, Healthcare, Ecommerce, and Banking sectors. 
+        Proficient in Java, Spring Boot, and ReactJS, with strong skills in data structures, algorithms, and problem-solving. 
+        Adept at building dynamic, responsive front-end applications and robust, scalable back-end systems. 
+        Skilled in secure coding practices, database management using Oracle SQL, and leveraging AWS for cloud-based deployments. 
+        Proficient in DevOps with hands-on experience in CI/CD pipelines using Jenkins. 
+        Continuously learning and applying best practices in Docker, Kubernetes, and container orchestration.
         </p>
       </div>
     </div>
